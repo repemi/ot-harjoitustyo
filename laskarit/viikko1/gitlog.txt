@@ -113,3 +113,4 @@ Date:   Wed Mar 17 08:55:27 2021 +0200
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
 
+Repositorioiden epäsynkrooni testaus.
