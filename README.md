@@ -1,4 +1,4 @@
-# **Ohjelmistotekniikka, harjoitystyö**
+# **Ohjelmistotekniikka, harjoitustyö**
 
 Kolmella ensimmäisellä viikolla tehdään _palautettavat_ laskarit:
 
@@ -6,6 +6,6 @@ Kolmella ensimmäisellä viikolla tehdään _palautettavat_ laskarit:
 
 ### Viikko 1:
 
-gitlog.txt
-komentorivi.txt
+* gitlog.txt
+* komentorivi.txt
 
