@@ -1,0 +1,115 @@
+(base) erepo@lx9-fuxi104:~/ot_viikko1/tiedostoja$ git log --stat|cat
+commit d12a8b406b18c93b9f01c59988751fe78a77e5f9
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 11:57:44 2021 +0200
+
+     poistettu file1 ja uudelleen nimetty file2
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a89f8774f112c66b4df6ad2feb571a0c3b3fabf8
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 11:54:05 2021 +0200
+
+    luotu kansio tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 7176116cd5039e9e48870056f2aaf6177f5b5489
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 11:47:29 2021 +0200
+
+    muutoksia tiedostoihin eka.txt ja kolmas.txt
+
+ eka.txt    | 1 +
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 2dacbfd3932ed4eb827109c47da39b546492ca17
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:10:57 2021 +0200
+
+    uudelleen nimetty tiedosto
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c33838460dba90e1bb151db6e05687d3d0952997
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:09:33 2021 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 6e28590b859da61cce1ac7a6ba2251075132f3f4
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:07:37 2021 +0200
+
+    poistettu ja lisätty tekstiä
+
+ tiedosto.txt | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+commit dd3b9000f4e8006f06dec7f278c98bfecce9df36
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:05:19 2021 +0200
+
+    lisätty tekstiä
+
+ tiedosto.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 57ef21e4cd44f9548e426601be95db4652667f10
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:02:06 2021 +0200
+
+    luotu stuff kansio
+
+ stuff/jokin_tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8996fd1afca1f8cd7e8bf99e1d63bea2cabb6c0a
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 09:00:43 2021 +0200
+
+    muutettu toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ae8d935be6dc527171044b025fcc204436db0672
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 08:59:37 2021 +0200
+
+    luotu kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d5ecc57c92e38d82951801639105ec4fd35453c5
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 08:57:37 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 0c259bc3889aee90f2bfeb91da64f29b90f30d46
+Author: repemi <emilia.k.repo@helsinki.fi>
+Date:   Wed Mar 17 08:55:27 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
