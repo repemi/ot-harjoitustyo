@@ -12,3 +12,8 @@ Kolmella ensimmäisellä viikolla tehdään _palautettavat_ laskarit.
 ### Viikko 2
 
 * [testauskattavuus](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko2/testauskattavuus.png)
+
+## Dokumentaatio
+
+* [Vaatimusmäärittely](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+* [Työaikakirjanpito](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
