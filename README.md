@@ -9,4 +9,6 @@ Kolmella ensimmäisellä viikolla tehdään _palautettavat_ laskarit.
 * [gitlog.txt](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 * [komentorivi.txt](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
-Luodaan paikallisen ja etärepositorion epäsynkrooni.
+### Viikko 2
+
+* [testauskattavuus](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko2/testauskattavuus.png)
