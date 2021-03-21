@@ -1,17 +1,14 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovelluksen avulla voit seurata omia menoja ja lisätä tuloja. Sovellusta voivat käyttää rekisteröityneet käyttäjät.
-Rekisteröitynyt käyttäjä näkee kirjautumisen takana olevan yksilöllisen budjetointinäkymän.
+Sovelluksella on mahdollista seurata omia menoja ja lisätä tuloja. Sovellusta voivat käyttää rekisteröityneet käyttäjät. Rekisteröitynyt käyttäjä näkee kirjautumisen takana olevan oman budjettinäkymänsä.
 
 ## Käyttäjät
-Käyttäjärooleja on alkuun vain peruskäyttäjä. Mahdollisuuksien mukaan lisätään ylläpitäjä.
-Ylläpitäjällä on ennemmän oikeuksia.
+Käyttäjärooleja on alkuun vain peruskäyttäjä. Tavoitteena on luoda myös ylläpitäjä, jolla on ennemmän oikeuksia esim peruskäyttäjien hallinointi ( = käyttäjien poistaminen).
 
 ## Käyttöliittymäluonnos
 
-Sovellus koostuu neljästä näkymästä. Sovellus aukeaa kirjautumisnäkymään, josta on mahdollista kirjautua sisään ko. käyttäjän budjettiin
-tai luoda uusi käyttäjä.
+Sovellus koostuu neljästä näkymästä. Sovelluksen ensimmäinen ikkuna on kirjautumisnäkymä, josta on mahdollista kirjautua sisään ko. käyttäjän budjettiin tai luoda uusi käyttäjä.
 Budjettinäkymästä voi klikata itsensä kaavionäkymään, jossa menot ovat esitettynä kaaviomuodossa.
 
 ## Suunnitellut toiminnallisuudet (Perusversio)
