@@ -1,6 +1,6 @@
 # Työaikakirjanpito
 
-| päivä  | aika (h) | mitä tehty    |
+| päivä  | aika (h) | sisältö    |
 | :----: |:---------| :--------|
 | 18.3   |  0.5     | Aiheenvalinta, ohjeiden luku |
 | 19.3   |  1       | Alustavan vaatimusmäärittelyn kirjoittamista|
