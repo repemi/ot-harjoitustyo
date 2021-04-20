@@ -1,23 +1,15 @@
 # **Ohjelmistotekniikka, harjoitustyö**
-
-Kolmella ensimmäisellä viikolla tehdään _palautettavat_ laskarit.
-
-## Tehtävät
-
-### Viikko 1
-
-* [gitlog.txt](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-* [komentorivi.txt](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
-
-### Viikko 2
-
-* [testauskattavuus](https://github.com/repemi/ot-harjoitustyo/blob/master/laskarit/viikko2/testauskattavuus.png)
-
-### Viikko 3
-
-* [kuvat](https://github.com/repemi/ot-harjoitustyo/tree/master/laskarit/viikko3)
+Tähän tulee lisää tekstiä kun työ etenee.
+Suorituskomentojen listaus työnalla.
 
 ## Dokumentaatio
 
 * [Vaatimusmäärittely](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Työaikakirjanpito](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+* [Arkkitehtuurikuvaus](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md) tyhjä!
+
+## Komentorivitoiminnot
+
+### Checkstyle
+
+ Tämä päivittyy myös
