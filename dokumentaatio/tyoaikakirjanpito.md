@@ -8,3 +8,4 @@
 | 24.3   |  2       | JavaFx yritys, en saanut toimimaan |
 | 8.4    |  2       | Tekstikäyttöliittymä |
 | 13.4   |  1       | Testien teko - yksi onnistunut|
+| 20.4   |  3       | Pari testiä, sovelluslogiikan korjausta, checkstyle, readme päivitys |
