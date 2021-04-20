@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import budgetApp.domain.Expense;
+import budgetapp.domain.Expense;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -23,6 +23,7 @@ public class ExpenseTest {
 
     @BeforeClass
     public static void setUpClass() {
+
     }
 
     @AfterClass
@@ -31,6 +32,7 @@ public class ExpenseTest {
 
     @Before
     public void setUp() {
+
     }
 
     @After
@@ -44,8 +46,25 @@ public class ExpenseTest {
     public void constructorSetParametersRight() {
 
         Expense expense = new Expense("kissa", 10);
-        
+
         String ans = expense.toString();
         assertEquals("Meno: kissa, Hinta: 10", ans);
     }
+
+    @Test
+    public void getMenoRetunsRight() {
+        Expense expense = new Expense("kissa", 10);
+        String ans = expense.getMeno();
+        assertEquals("kissa", ans);
+
+    }
+
+    @Test
+    public void getSummaRetunsRight() {
+        Expense expense = new Expense("kissa", 10);
+        int ans = expense.getSumma();
+        assertEquals(10, ans);
+
+    }
+
 }

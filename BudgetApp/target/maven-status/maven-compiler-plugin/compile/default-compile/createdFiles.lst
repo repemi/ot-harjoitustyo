@@ -1,6 +1,0 @@
-budgetApp/domain/Expense.class
-budgetApp/dao/ExpenseDao.class
-budgetApp/Main.class
-budgetApp/dao/FileExpenseDao.class
-budgetApp/domain/ExpenseCounterService.class
-budgetApp/ui/ExpenseCounter.class

@@ -1,6 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Budjettilaskuri,budgetApp.domain,Expense,8,15,0,0,4,5,4,2,4,2
-Budjettilaskuri,budgetApp.domain,ExpenseCounterService,180,0,10,0,45,0,14,0,9,0
-Budjettilaskuri,budgetApp.ui,ExpenseCounter,187,0,16,0,58,0,17,0,9,0
-Budjettilaskuri,budgetApp.dao,FileExpenseDao,99,0,4,0,28,0,7,0,5,0
-Budjettilaskuri,budgetApp,Main,16,0,0,0,5,0,2,0,2,0

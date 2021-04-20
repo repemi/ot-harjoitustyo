@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-import budgetApp.domain.Expense;
-import budgetApp.domain.ExpenseCounterService;
+import budgetapp.domain.Expense;
+import budgetapp.domain.ExpenseCounterService;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -40,9 +42,24 @@ public class ExpenseCounterServiceTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-
+  @Test
+  public void addExpenseRight(){
+      Expense expense = new Expense("kissa", 10);
+      ArrayList <Expense> list = new ArrayList<>();
+      list.add(expense);
+      assertEquals("[Meno: kissa, Hinta: 10]", list.toString());
+  }
+  
+  @Test
+  public void clearListIsClear() {
+      ArrayList<Expense> list = new ArrayList<>();
+      ArrayList<Expense> empty = new ArrayList<>();
+      list.add(new Expense("kissa", 10));
+      list.add(new Expense("koira", 40));
+      
+      list.clear();
+      assertEquals(empty, list);
+      
+  }
 
 }
