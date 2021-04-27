@@ -11,25 +11,25 @@ Käyttäjärooleja on peruskäyttäjä. Myöhemmin mahdollisesti myös ylläpit�
 
 ## Käyttöliittymäluonnos
 Sovellus koostuu kolmesta (3) näkymästä:
-1. Kirjautumisnäkymä: voi kirjautua sisään sovellukseen tai luoda uuden käyttäjätunnuksen.
-2. Uuden käyttäjätunnuksen luonti: luodaan uusi käyttäjätunnus, josta palataan takaisin kirjautumisnäkymään, kun tunnus on luotu onnistuneesti.
-3. Menolistanäkymä: kirjautunut käyttäjä näkee omat kirjaamansa menotiedot.
+1. Kirjautumisnäkymä: voi kirjautua sisään sovellukseen tai luoda uuden käyttäjätunnuksen. "tehty"
+2. Uuden käyttäjätunnuksen luonti: luodaan uusi käyttäjätunnus, josta palataan takaisin kirjautumisnäkymään, kun tunnus on luotu onnistuneesti. "tehty"
+3. Menolistanäkymä: kirjautunut käyttäjä näkee omat kirjaamansa menotiedot. "tehty osittain"
 
 ## Suunnitellut toiminnallisuudet (Perusversio)
 
 ### Ennen kirjautumista:
-* Käyttäjä voi luoda tunnuksen järjestelmään.
-* Käyttäjä voi kirjautua järjestelmään.
- * Kirjautuminen tapahtuu syöttämällä olemassa oleva käyttäjätunnus sille varattuun kohtaan ja klikataan "kirjaudu". 
- * Jos käyttäjää ei löydy, järjestelmä antaa virheviestin.
+* Käyttäjä voi luoda tunnuksen järjestelmään. "tehty"
+* Käyttäjä voi kirjautua järjestelmään. "tehty"
+ * Kirjautuminen tapahtuu syöttämällä olemassa oleva käyttäjätunnus sille varattuun kohtaan ja klikataan "kirjaudu". "tehty"
+ * Jos käyttäjää ei löydy, järjestelmä antaa virheviestin. "tehty"
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjä näkee listan kirjatuista menoista.
-* Käyttäjä voi kirjata lisää menoja syöttämällä tuotteen nimen ja klikkaamalla "ok".
+* Käyttäjä näkee listan kirjatuista menoista. "tehty -osittain tuotteet näkyvät, mutta hinnat eivät"
+* Käyttäjä voi kirjata lisää menoja syöttämällä tuotteen nimen ja klikkaamalla "ok". "tehty osittain"
 * Käyttäjä voi lisätä menolle summan, kuinka paljon se on maksanut.
 * Menolistanäkymässä on yhteenlaskettu summa menojen kuluista.
-* Käyttäjä voi kirjautua ulos järjestelmäst klikkaamalla "kirjaudu ulos".
+* Käyttäjä voi kirjautua ulos järjestelmästä klikkaamalla "kirjaudu ulos". "tehty"
 
 ## Jatkokehitysideat
 
