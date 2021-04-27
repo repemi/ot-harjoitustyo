@@ -1,15 +1,19 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovelluksella on mahdollista seurata omia menoja ja lisätä tuloja. Sovellusta voivat käyttää rekisteröityneet käyttäjät. Rekisteröitynyt käyttäjä näkee kirjautumisen takana olevan oman budjettinäkymänsä.
+Menolaskuri sovellus, jonka tarkoituksena: 
+- Mahdollista seurata ja listata omia menoja ylös, jotta saa selville mihin rahaa kuluu eli menolaskuri (= mitä on ostettu ja miten paljon rahaa on kulunut).
+- Sovellusta voi käyttää rekisteröityneet käyttäjät
+- Rekisteröitynyt käyttäjä näkee kirjautumisen jälkeen omat menotietonsa eli kirjatut menot listana.
 
 ## Käyttäjät
-Käyttäjärooleja on alkuun vain peruskäyttäjä. Tavoitteena on luoda myös ylläpitäjä, jolla on ennemmän oikeuksia esim peruskäyttäjien hallinointi ( = käyttäjien poistaminen).
+Käyttäjärooleja on peruskäyttäjä. Myöhemmin mahdollisesti myös ylläpitäjä, jolla on ennemmän oikeuksia esim peruskäyttäjien hallinointi ( = käyttäjien poistaminen).
 
 ## Käyttöliittymäluonnos
-
-Sovellus koostuu neljästä näkymästä. Sovelluksen ensimmäinen ikkuna on kirjautumisnäkymä, josta on mahdollista kirjautua sisään ko. käyttäjän budjettiin tai luoda uusi käyttäjä.
-Budjettinäkymästä voi klikata itsensä kaavionäkymään, jossa menot ovat esitettynä kaaviomuodossa.
+Sovellus koostuu kolmesta (3) näkymästä:
+1. Kirjautumisnäkymä: voi kirjautua sisään sovellukseen tai luoda uuden käyttäjätunnuksen.
+2. Uuden käyttäjätunnuksen luonti: luodaan uusi käyttäjätunnus, josta palataan takaisin kirjautumisnäkymään, kun tunnus on luotu onnistuneesti.
+3. Menolistanäkymä: kirjautunut käyttäjä näkee omat kirjaamansa menotiedot.
 
 ## Suunnitellut toiminnallisuudet (Perusversio)
 
@@ -21,22 +25,20 @@ Budjettinäkymästä voi klikata itsensä kaavionäkymään, jossa menot ovat es
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjä näkee käytettävissä olevat varat kohdassa saldo eli summan, josta on vähennetty ilmoitetut menot.
-* Käyttäjä voi kirjata lisää tuloja syöttämällä summan ja klikkaamalla "ok".
-* Käyttäjä voi lisätä uuden menon valitsemalla alasvetovalikosta kategorian ja syöttämällä summan ja klikkaamalla "ok".
-* Käyttäjä pääsee menojen kaavionäkymään klikkaamalla "luo kaavio menoista".
-* Kaavionäkymästä palataan takaisin budjettinäkymään klikkaamalla "palaa takaisin".
+* Käyttäjä näkee listan kirjatuista menoista.
+* Käyttäjä voi kirjata lisää menoja syöttämällä tuotteen nimen ja klikkaamalla "ok".
+* Käyttäjä voi lisätä menolle summan, kuinka paljon se on maksanut.
+* Menolistanäkymässä on yhteenlaskettu summa menojen kuluista.
 * Käyttäjä voi kirjautua ulos järjestelmäst klikkaamalla "kirjaudu ulos".
 
 ## Jatkokehitysideat
 
-* Budjettinäkymässä näkyy myös kertyneet menot summana.
-* Budjetin nollaaminen
+* Menolistanäkymässä näkyisi myös kertyneet menot summana.
 * Yhteenveto menoista eli lista kaikista menoista.
+* Menolaskurin laajennus budjettilaskuriksi, johon voi lisätä tulotietoja.
 * Käyttäjälle lisätään salasana, joka vaaditaan kirjatuessa.
-* Käyttäjätunnuksen poisto ja siihen liittyvän budjetin poistaminen.
+* Käyttäjätunnuksen poisto ja siihen liittyvän menolistan poistaminen.
 * Käyttäjä voi perua väärin merkatut menot.
-* Käyttäjälle luodaan mahdollisuus kirjata lisätietoja menoista esim. farkut, hotelliyö tms.
-* Käyttäjällä voi olla useampia budjettinäkymiä esim. eri kuukausille
+* Käyttäjällä voi olla useampia menolistoja esim. eri kuukausille.
 * Useampi käyttäjä voi nähdä ja muokata samaa budjettia esim. perheelle yhteinen budjetti.
 
