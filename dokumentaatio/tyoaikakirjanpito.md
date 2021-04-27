@@ -9,3 +9,4 @@
 | 8.4    |  2       | Tekstikäyttöliittymä |
 | 13.4   |  1       | Testien teko - yksi onnistunut|
 | 20.4   |  3       | Pari testiä, sovelluslogiikan korjausta, checkstyle, readme päivitys |
+| 26.4   |  2       | JavaFx käyttöliittymän luonti, sovelluksen idean päivitys budjettilaskuri -> menolaskuri |
