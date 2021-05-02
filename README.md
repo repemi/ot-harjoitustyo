@@ -1,6 +1,6 @@
 # **Ohjelmistotekniikka, harjoitustyö**
-Helsingin yliopiston Ohjelmistotekniikka kurssille kevät 2021 toteutettu harjoitustyö.
-Projektina on JavaFX sovellus, jolla seurataan menoja.
+Helsingin yliopiston [Ohjelmistotekniikan](https://ohjelmistotekniikka-hy.github.io/) kurssille kevät 2021 toteutettu harjoitustyö.
+Projektina on JavaFX sovellus, jolla tunnuksen luonut käyttäjä voi kirjata ja seurata omia menojaan.
 
 Sovellus ExpenseCounter (menolaskuri) löytää [täältä](https://github.com/repemi/ot-harjoitustyo/tree/master/ExpenseCounter)
 BudgetApp on vanhaversio, joka ei ole käytössä - se on tarkoitus poistaa.
@@ -18,13 +18,19 @@ BudgetApp on vanhaversio, joka ei ole käytössä - se on tarkoitus poistaa.
 
 ## Komentorivitoiminnot
 
-Siirry ensin kansioon 
+Siirry ensin kansioon:
 
 ```
 cd ExpenseCounter/
 ```
+Ohjelman saa suoritettua komennolla:
+
+```
+mvn compile exec:java -Dexec.mainClass=expensecounter.Main
+```
 
 ### Testaus
+
 
 Testit voi suorittaa komennolla:
 ```
@@ -33,18 +39,24 @@ mvn test
 
 Testikattavuusraportti saadaan luotua komennolla:
 ```
-mvn jacoco:report
+mvn test jacoco:report
 ```
+Testiraportti löytyy -> _target/site/jacoco/index.html_
 
-Luo suoritettava jar tiedosto:
-```
-mvn package
-```
 Checkstyle raportti ei ole tällä hetkellä toiminnassa.
 Muulloin se toimii komennolla:
 
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ```
+Checkstyle raportti löytyy -> _target/site/checkstyle.html_
+
+### Suoritettava jar luodaan: 
+
+komento:
+```
+mvn package
+```
+komento generoi target hakemistoon suoritettavan jar-tiedoston 
  
 
