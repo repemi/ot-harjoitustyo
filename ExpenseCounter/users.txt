@@ -1,1 +1,3 @@
-kaisa;kaisaliisa
+katti;kattinen
+mattinen;matti
+patti;pattinen
