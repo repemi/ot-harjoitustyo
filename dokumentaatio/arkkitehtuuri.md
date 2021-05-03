@@ -23,12 +23,12 @@ Jokainen näkymä näkyy vain yksi kerrallaan käyttäjälle ja ne ovat toteutet
 
 ## Sovelluslogiikka
 
-Sovelluksen loogisesta tietomallista vastaavat luokat [Expense](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/Expense.java) ja [User](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/User.java) Luokat kuvaavat menoja, käyttäjiä ja niiden tehtäviä.
+Sovelluksen loogisesta tietomallista vastaavat luokat [Expense](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/Expense.java) ja [User](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/User.java). Luokat kuvaavat menoja, käyttäjiä ja niiden tehtäviä.
 
 ![](./kuvat/Luokkakaavio.png)
 
 
-[ExpensreCounter](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/ExpenseCounterService.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat:
+[ExpensesCounter](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/ExpenseCounterService.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat:
 
 - boolean login(String username)
 -void createExpense(String product, User user)
