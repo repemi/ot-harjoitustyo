@@ -33,7 +33,7 @@ public class FileExpenseDao implements ExpenseDao {
     }
 
     private void save() throws Exception {
-        try ( FileWriter writer = new FileWriter(new File(file))) {
+        try (FileWriter writer = new FileWriter(new File(file))) {
             for (Expense expense : expenses) {
                 writer.write(expense.getId() + ";" + expense.getProduct() + ";" + expense.getCost() + ";" + expense.getUser().getUsername() + "\n");
             }
@@ -57,5 +57,4 @@ public class FileExpenseDao implements ExpenseDao {
         return expenses;
     }
 
-  
 }

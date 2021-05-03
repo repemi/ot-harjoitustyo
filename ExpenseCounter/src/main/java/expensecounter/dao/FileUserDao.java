@@ -30,7 +30,7 @@ public class FileUserDao implements UserDao {
     }
 
     private void save() throws Exception {
-        try ( FileWriter writer = new FileWriter(new File(file))) {
+        try (FileWriter writer = new FileWriter(new File(file))) {
             for (User user : users) {
                 writer.write(user.getUsername() + ";" + user.getName() + "\n");
             }
@@ -47,7 +47,7 @@ public class FileUserDao implements UserDao {
     @Override
     public User findByUsername(String username) {
         return users.stream()
-                .filter(u->u.getUsername()
+                .filter(u -> u.getUsername()
                 .equals(username))
                 .findFirst()
                 .orElse(null);

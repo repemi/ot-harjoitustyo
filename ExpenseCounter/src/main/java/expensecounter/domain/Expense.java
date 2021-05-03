@@ -19,8 +19,8 @@ public class Expense {
         this.product = product;
         this.user = user;
     }
-    
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -31,8 +31,8 @@ public class Expense {
     public void setCost(int cost) {
 
     }
-    
-    public int getId(){
+
+    public int getId() {
         return this.id;
     }
 
@@ -43,8 +43,8 @@ public class Expense {
     public int getCost() {
         return this.cost;
     }
-    
-    public User getUser(){
+
+    public User getUser() {
         return this.user;
     }
 
@@ -52,10 +52,10 @@ public class Expense {
     public String toString() {
         return product + ", " + cost;
     }
-    
+
     @Override
-    public boolean equals(Object o){
-        if(!(o instanceof Expense)){
+    public boolean equals(Object o) {
+        if (!(o instanceof Expense)) {
             return false;
         }
         Expense other = (Expense) o;

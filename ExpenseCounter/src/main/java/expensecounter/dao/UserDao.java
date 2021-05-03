@@ -1,6 +1,5 @@
 package expensecounter.dao;
 
-
 import expensecounter.domain.User;
 import java.util.List;
 
