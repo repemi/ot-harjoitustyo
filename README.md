@@ -43,8 +43,7 @@ mvn test jacoco:report
 ```
 Testiraportti löytyy -> _target/site/jacoco/index.html_
 
-Checkstyle raportti ei ole tällä hetkellä toiminnassa.
-Muulloin se toimii komennolla:
+Checkstyle raportin saa komennolla: 
 
 ```
 mvn jxr:jxr checkstyle:checkstyle
