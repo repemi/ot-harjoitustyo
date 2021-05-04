@@ -56,8 +56,8 @@ JavaDoc luodaan komennolla:
 ```
 mvn javadoc:javadoc
 ```
-*dokumenttia pääset tarkastelemaan kun avaat
-target/site/apidocs/index.html selaimessa.*
+dokumenttia pääset tarkastelemaan kun avaat
+*target/site/apidocs/index.html* selaimessa.
 
 ### Suoritettava jar luodaan: 
 
