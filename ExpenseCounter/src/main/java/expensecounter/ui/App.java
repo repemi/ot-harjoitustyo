@@ -5,8 +5,11 @@ import expensecounter.dao.FileUserDao;
 import expensecounter.domain.Expense;
 import expensecounter.domain.ExpenseCounterService;
 import java.io.FileInputStream;
+import static java.lang.Integer.parseInt;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -93,7 +96,7 @@ public class App extends Application {
         Button createButton = new Button("Luo uusi käyttäjä");
         loginButton.setOnAction(e -> {
             String username = usernameInput.getText();
-            menuLabel.setText(username + " on kirjautunut sisään.");
+            menuLabel.setText("Terveltuoa " + username + " !");
             if (expensecounter.login(username)) {
                 loginMessage.setText("Tervetuloa");
                 stage.setScene(expensesScene);
@@ -111,7 +114,7 @@ public class App extends Application {
 
         loginPane.getChildren().addAll(loginMessage, inputPane, loginButton, createButton);
 
-        loginScene = new Scene(loginPane, 300, 250);
+        loginScene = new Scene(loginPane, 400, 300);
 
         //new createNewUserScene
         VBox newUserPane = new VBox(10);
@@ -144,7 +147,7 @@ public class App extends Application {
                 userCreationMessage.setTextFill(Color.BLUEVIOLET);
             } else if (expensecounter.createUser(username, name)) {
                 userCreationMessage.setText("");
-                loginMessage.setText("Uusi käyttäjä luotu");
+                loginMessage.setText("Uusi käyttäjä luotu onnistuneesti, nyt voit kirjautua sisään");
                 loginMessage.setTextFill(Color.GREEN);
                 stage.setScene(loginScene);
             } else {
@@ -156,12 +159,12 @@ public class App extends Application {
 
         newUserPane.getChildren().addAll(userCreationMessage, newUsernamePane, newNamePane, createNewUserButton);
 
-        newUserScene = new Scene(newUserPane, 300, 250);
+        newUserScene = new Scene(newUserPane, 400, 300);
 
         //main scene
         ScrollPane expenseScrollbar = new ScrollPane();
         BorderPane mainPane = new BorderPane(expenseScrollbar);
-        expensesScene = new Scene(mainPane, 300, 250);
+        expensesScene = new Scene(mainPane, 400, 500);
 
         HBox menuPane = new HBox(10);
         Region menuSpacer = new Region();
@@ -177,8 +180,9 @@ public class App extends Application {
         Button createExpense = new Button("Lisää");
         Region spacer = new Region();
         HBox.setHgrow(spacer, Priority.ALWAYS);
-        TextField newExpenseInput = new TextField();
-        createForm.getChildren().addAll(newExpenseInput, spacer, createExpense);
+        TextField newExpenseProductInput = new TextField();
+       
+        createForm.getChildren().addAll(newExpenseProductInput, spacer,createExpense);
 
         expenseNodes = new VBox(10);
         expenseNodes.setMaxWidth(280);
@@ -190,8 +194,8 @@ public class App extends Application {
         mainPane.setTop(menuPane);
 
         createExpense.setOnAction(e -> {
-            expensecounter.createExpense(newExpenseInput.getText());
-            newExpenseInput.setText("");
+            expensecounter.createExpense(newExpenseProductInput.getText());
+            newExpenseProductInput.setText("");
             redrawExpenseList();
         });
 

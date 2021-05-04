@@ -21,7 +21,7 @@ public class FileExpenseDao implements ExpenseDao {
                 String[] parts = reader.nextLine().split(";");
                 int id = Integer.parseInt(parts[0]);
                 String product = parts[1];
-                int cost = Integer.parseInt(parts[2]);
+                String cost = parts[2];
                 User user = users.getAll().stream().filter(u -> u.getUsername().equals(parts[3])).findFirst().orElse(null);
                 Expense expense = new Expense(id, product, cost, user);
                 expenses.add(expense);

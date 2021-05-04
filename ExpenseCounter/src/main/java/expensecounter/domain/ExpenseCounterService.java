@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Luokka, jossa tapahtuu menolaskurin toiminnot.
+ */
 public class ExpenseCounterService {
 
     private ExpenseDao expenseDao;
@@ -19,9 +22,9 @@ public class ExpenseCounterService {
 
     /**
      *
-     * Add new expense to user who is logged in
+     * Lisätään uusi tuote, josta on kuluja käyttäjälle.
      *
-     * @param expense new expense
+     * @param product uusi tuote
      */
     public boolean createExpense(String product) {
         Expense expense = new Expense(product, loggedIn);
@@ -47,11 +50,11 @@ public class ExpenseCounterService {
     }
 
     /**
-     * logging in
+     * sisäänkirjautuminen
      *
      * @param username käyttäjätunnus
      *
-     * @return true if username is created, else return false
+     * @return palauttaa true, jos käyttäjä on kirjautunut sisään muutoin false
      */
     public boolean login(String username) {
         User user = userDao.findByUsername(username);
@@ -66,16 +69,16 @@ public class ExpenseCounterService {
 
     /**
      *
-     * user has logged in
+     * kertoo käyttäjän, joka on kirjautuneena sisään.
      *
-     * @return user who is logged in
+     * @return palauttaa käyttäjän, joka on kirjautunut sisään.
      */
     public User getLoggedUser() {
         return loggedIn;
     }
 
     /**
-     * log out
+     * kirjaa ulos sovelluksesta.
      *
      */
     public void logout() {
@@ -83,12 +86,13 @@ public class ExpenseCounterService {
     }
 
     /**
-     * create new user
+     * Uuden käyttäjän luonti
      *
      * @param username käyttäjätunnus
      * @param name käyttäjän nimi
      *
-     * @return true if username is created successfully, else false
+     * @return palauttaa true, jos käyttäjän luonti on onnistunut, muutoin
+     * false.
      */
     public boolean createUser(String username, String name) {
         if (userDao.findByUsername(username) != null) {

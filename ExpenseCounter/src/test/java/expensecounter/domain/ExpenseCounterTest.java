@@ -1,3 +1,5 @@
+package expensecounter.domain;
+
 
 
 import expensecounter.domain.User;

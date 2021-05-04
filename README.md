@@ -58,4 +58,4 @@ mvn package
 ```
 komento generoi target hakemistoon suoritettavan jar-tiedoston 
  
-
+Kun jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ExpensesCounter kansion alle, jossa jar tiedosto on mahdollista ajaa.

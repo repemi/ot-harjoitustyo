@@ -1,5 +1,8 @@
 package expensecounter.domain;
 
+/**
+ * Luokka, jossa on käyttäjää koskevat tiedot.
+ */
 public class User {
 
     private String name;
@@ -10,10 +13,22 @@ public class User {
         this.username = username;
     }
 
+     /**
+     *
+     * Palauttaa rekisteröityneen käyttäjän nimen.
+     *
+     * 
+     */
     public String getName() {
         return this.name;
     }
 
+     /**
+     *
+     * Palauttaa rekisteröityneen käyttäjän (käyttäjä)tunnuksen.
+     *
+     *
+     */
     public String getUsername() {
         return this.username;
     }

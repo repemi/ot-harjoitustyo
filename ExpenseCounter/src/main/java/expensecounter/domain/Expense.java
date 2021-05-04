@@ -1,13 +1,18 @@
 package expensecounter.domain;
 
+import static java.lang.Integer.parseInt;
+
+/**
+ * Luokka, jossa luodaan tuotteen tiedot eli meno.
+ */
 public class Expense {
 
     private int id;
     private String product;
-    private int cost;
+    private String cost;
     private User user;
 
-    public Expense(int id, String product, int cost, User user) {
+    public Expense(int id, String product, String cost, User user) {
         this.id = id;
         this.product = product;
         this.cost = cost;
@@ -20,16 +25,37 @@ public class Expense {
         this.user = user;
     }
 
+    public Expense(String product, String cost, User user) {
+        this.product = product;
+        this.cost = cost;
+        this.user = user;
+    }
+ /**
+     *
+     * Asettaa uuden id:n.
+     *
+     * @param id uusi id
+     */
     public void setId(int id) {
         this.id = id;
     }
-
+ /**
+     *
+     *Päivittää tuotteen.
+     *
+     * @param product uusi tuote
+     */
     public void setProduct(String product) {
-
+        this.product = product;
     }
-
-    public void setCost(int cost) {
-
+ /**
+     *
+     * Asettaa tuotteelle uuden hinnan.
+     *
+     * @param cost uusi hinta/kulu
+     */
+    public void setCost(String cost) {
+        this.cost = cost;
     }
 
     public int getId() {
@@ -39,9 +65,21 @@ public class Expense {
     public String getProduct() {
         return this.product;
     }
-
-    public int getCost() {
+ /**
+     *
+     * Palauttaa merkkijonomuodossa tuotteen hinnan.
+     *
+     */
+    public String getCost() {
         return this.cost;
+    }
+/**
+     *
+     * Palauttaa tuotteen hinnan int tyyppinä.
+     *
+     */
+    public int getCostInt() {
+        return parseInt(this.cost);
     }
 
     public User getUser() {
