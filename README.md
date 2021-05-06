@@ -3,7 +3,6 @@ Helsingin yliopiston [Ohjelmistotekniikan](https://ohjelmistotekniikka-hy.github
 Projektina on JavaFX sovellus, jolla tunnuksen luonut käyttäjä voi kirjata ja seurata omia menojaan.
 
 Sovellus ExpenseCounter (menolaskuri) löytää [täältä](https://github.com/repemi/ot-harjoitustyo/tree/master/ExpenseCounter)
-BudgetApp on vanhaversio, joka ei ole käytössä - se on tarkoitus poistaa.
 
 
 ## Dokumentaatio
