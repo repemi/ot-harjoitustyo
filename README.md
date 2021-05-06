@@ -50,6 +50,15 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 Checkstyle raportti löytyy -> _target/site/checkstyle.html_
 
+### JavaDoc
+
+JavaDoc luodaan komennolla:
+```
+mvn javadoc:javadoc
+```
+dokumenttia pääset tarkastelemaan kun avaat
+*target/site/apidocs/index.html* selaimessa.
+
 ### Suoritettava jar luodaan: 
 
 komento:
@@ -58,4 +67,4 @@ mvn package
 ```
 komento generoi target hakemistoon suoritettavan jar-tiedoston 
  
-Kun jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ExpensesCounter kansion alle, jossa jar tiedosto on mahdollista ajaa.
+*Kun ExpenseCounter-1.0-SNAPSHOT.jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ExpensesCounter kansion alle, jossa jar tiedosto on mahdollista ajaa.*
