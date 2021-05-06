@@ -5,3 +5,6 @@
 /BudgetApp/target/
 /ExpenseCounter/nbproject/
 /ExpenseCounter/target/
+/ExpenseCounter/expenses.txt/
+/ExpenseCounter/users.txt/
+
