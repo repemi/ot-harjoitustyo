@@ -1,5 +1,0 @@
-katti;kattinen
-mattinen;matti
-patti;pattinen
-possu;pipsa
-pipsa;possu
