@@ -1,9 +1,0 @@
-itemlist/ui/App.class
-itemlist/dao/FileItemDao.class
-itemlist/domain/Item.class
-itemlist/domain/ItemList.class
-itemlist/domain/User.class
-itemlist/dao/FileUserDao.class
-itemlist/dao/ItemDao.class
-itemlist/Main.class
-itemlist/dao/UserDao.class
