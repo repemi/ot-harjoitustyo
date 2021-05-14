@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"itemlist"},{"l":"itemlist.dao"},{"l":"itemlist.domain"},{"l":"itemlist.ui"}]

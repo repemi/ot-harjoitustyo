@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ExpenseCounter,expensecounter,Main,6,0,0,0,3,0,2,0,2,0
+ExpenseCounter,expensecounter.domain,ExpenseCounterService,106,0,8,0,33,0,13,0,9,0
+ExpenseCounter,expensecounter.domain,User,0,29,0,2,0,10,0,5,0,4
+ExpenseCounter,expensecounter.domain,Expense,23,64,1,3,10,21,3,12,2,11
+ExpenseCounter,expensecounter.dao,FileUserDao,11,101,0,4,3,25,0,8,0,6
+ExpenseCounter,expensecounter.dao,FileExpenseDao,137,0,4,0,28,0,8,0,6,0

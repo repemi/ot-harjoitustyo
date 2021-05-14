@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/package-info.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/domain/package-info.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/domain/User.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/domain/ItemList.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/domain/Item.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/dao/package-info.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/dao/ItemDao.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/dao/FileItemDao.java">
+<error line="41" column="14" severity="error" message="&apos;(&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/dao/UserDao.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/dao/FileUserDao.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/Main.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/ui/package-info.java">
+</file>
+<file name="/home/erepo/ot-harjoitustyo/ExpenseCounter/src/main/java/itemlist/ui/App.java">
+<error line="91" column="5" severity="error" message="Method length is 29 lines (max allowed is 20)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="127" column="5" severity="error" message="Method length is 36 lines (max allowed is 20)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="174" column="5" severity="error" message="Method length is 32 lines (max allowed is 20)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+</file>
+</checkstyle>

@@ -1,0 +1,5 @@
+expensecounter/dao/FileExpenseDaoTest.class
+expensecounter/domain/ExpenseCounterTest.class
+expensecounter/domain/ExpenseTest.class
+expensecounter/domain/UserTest.class
+expensecounter/dao/FileUserDaoTest.class
