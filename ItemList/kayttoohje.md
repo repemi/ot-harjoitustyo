@@ -4,7 +4,7 @@ Lataa tiedosto itemlist.jar(LINKKI TÄHÄN)
 
 ## Konfigurointi
 
-Ohjelma tulee olla sen käynnistyshakemistossa _config.properties_, jossa määritellään talletettavien tiedostojen nimet. Tiedostojen nimet ovat seuraavanlaiset:
+Ohjelmaa käynnistettäessä, sen käynnistyshakemistossa (Tässä tapauksessa ohjelmaa käynnistetään ItemList hakemistosta) tulee löytyä myös _config.properties_, jossa määritellään talletettavien tiedostojen nimet. Tiedostojen nimet ovat seuraavanlaiset:
 
 ```
 userFile=users.txt
@@ -15,7 +15,7 @@ itemFile=items.txt
 ## Ohjelman käynnistys
 
 Ohjelma saadaan käynnistettya komennolla. 
-_HUOM! Tätä ennen tiedosto.jar target tulee siirtää _target kansisosta _ItemList kansioon ja käynnistää se sieltä käsin._
+_HUOM! Tätä ennen tiedosto.jar target tulee siirtää target kansisosta ItemList kansioon ja käynnistää se sieltä käsin._
 
 ```
 java -jar tiedosto.jar
@@ -25,7 +25,7 @@ java -jar tiedosto.jar
 
 - Sovellus aukeaa kirjautumisnäkymään. 
 	Näkymästä pääsee luomaan uuden käyttäjän klikkaamalla _luo uusi käyttäjä_ tai siirtymällä 	
-	laskuriin klikkaamalla _kirjaudu_ 
+	laskuriin klikkaamalla _kirjaudu_. 
 
 ![](./kuvat/kirjautuminen.png)
 
@@ -44,5 +44,4 @@ java -jar tiedosto.jar
 	Jos tuotte on pakattu jo tai sen muusta syystä haluaa poistaa listalta tulee painaa tuotteen nimen vieressä
 	olevaa nappia _x_.
 
-	Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, _kirjaudu ulos_. Jolloin sovellus
-	palaa takaisin kirjautumisnäkymään.
+	Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, käyttämällä kirjaudu ulos -nappia. 	Jolloin sovellus palaa takaisin kirjautumisnäkymään.
