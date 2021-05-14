@@ -1,44 +1,47 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Menolaskuri sovellus, jonka tarkoituksena: 
-- Mahdollista seurata ja listata omia menoja ylös, jotta saa selville mihin rahaa kuluu eli menolaskuri (= mitä on ostettu ja miten paljon rahaa on kulunut).
-- Sovellusta voi käyttää rekisteröityneet käyttäjät
-- Rekisteröitynyt käyttäjä näkee kirjautumisen jälkeen omat menotietonsa eli kirjatut menot listana.
+
+Sovellus on yksinkertainen pakkauslista, jonka avulla voi suunnitella, mitä tavaroita pitää pakata mukaan reissuun. Sovellusta käytetään kirjautuneena, jolloin se myös muistaa mitä sinne on aiemmin kirjoittanut muistiin. Sovellukseen voi useampi kirjautunut käyttäjä luoda itsellensä pakkauslistan.
 
 ## Käyttäjät
-Käyttäjärooleja on peruskäyttäjä. Myöhemmin mahdollisesti myös ylläpitäjä, jolla on ennemmän oikeuksia esim peruskäyttäjien hallinointi ( = käyttäjien poistaminen).
 
-## Käyttöliittymäluonnos
+Käyttäjärooleja on peruskäyttäjä. Myöhemmin ajan puitteissa lisätään ylläpitäjä, jolla on enemmän oikeuksia esim. Peruskäyttäjien hallinnointi ( = käyttäjien poistaminen).
+
+## Käyttöliittymä luonnos
+
+![](./kuvat/luonnos.png)
+
 Sovellus koostuu kolmesta (3) näkymästä:
-1. Kirjautumisnäkymä: voi kirjautua sisään sovellukseen tai luoda uuden käyttäjätunnuksen. "tehty"
-2. Uuden käyttäjätunnuksen luonti: luodaan uusi käyttäjätunnus, josta palataan takaisin kirjautumisnäkymään, kun tunnus on luotu onnistuneesti. "tehty"
-3. Menolistanäkymä: kirjautunut käyttäjä näkee omat kirjaamansa menotiedot. "tehty osittain"
 
-## Suunnitellut toiminnallisuudet (Perusversio)
+1. Kirjautumisnäkymä : voi kirjautua sisään sovellukseen tai luoda uuden käyttäjätunnuksen
+2. Uuden käyttäjätunnuksen luonti: luodaan uusi käyttäjätunnus, josta palataan takaisin kirjautumisnäkymään, kun tunnus on luotu onnistuneesti.
+3. Pakkauslista näkymä : kirjautunut käyttäjä pääsee katselemaan omaa listaansa, ja poistamaan tuotteita/tavaroita, jotka on saanut pakattua.
 
-### Ennen kirjautumista:
-* Käyttäjä voi luoda tunnuksen järjestelmään. "tehty"
-* Käyttäjä voi kirjautua järjestelmään. "tehty"
- * Kirjautuminen tapahtuu syöttämällä olemassa oleva käyttäjätunnus sille varattuun kohtaan ja klikataan "kirjaudu". "tehty"
- * Jos käyttäjää ei löydy, järjestelmä antaa virheviestin. "tehty"
+## Toiminnallisuudet
+
+### Sovelluksen käynnistyminen
+
+_Uuden tunnuksen luominen_
+- Käyttäjän on mahdollista luoda uusi käyttäjätunnus järjestelmään.
+- Käyttäjätunnus on yksilöllinen, ja siitä tulee virheilmoitus, jos yrittää luoda, jo käytössä olevan tunnuksen.
+
+_Kirjautuminen_
+- Käyttäjä voi kirjautua järjestelmään, tunnuksella, joka on jo olemassa.
+- Jos yrittää kirjautua järjestelmään, ennen kuin tunnus on luotu tai sitä ei ole olemassa, siitä tulee virheilmoitus
 
 ### Kirjautumisen jälkeen
 
-* Käyttäjä näkee listan kirjatuista menoista. "tehty -osittain tuotteet näkyvät, mutta hinnat eivät"
-* Käyttäjä voi kirjata lisää menoja syöttämällä tuotteen nimen ja klikkaamalla "ok". "tehty osittain"
-* Käyttäjä voi lisätä menolle summan, kuinka paljon se on maksanut.
-* Menolistanäkymässä on yhteenlaskettu summa menojen kuluista.
-* Käyttäjä voi kirjautua ulos järjestelmästä klikkaamalla "kirjaudu ulos". "tehty"
+- Kirjautunut käyttäjä näkee oman pakkauslistansa, eli vielä pakkaamattomat tarvarat.
+- Käyttäjä voi halutessaan kuitata tuotteen/tavaran pakatuksi, jolloin se häviä listalta.
+- Käyttäjän tulee kirjautua ulos järjestelmästä, jos haluaa sulkea sovelluksen.
 
-## Jatkokehitysideat
+## Jatkokehitysideoita
 
-* Menolistanäkymässä näkyisi myös kertyneet menot summana.
-* Yhteenveto menoista eli lista kaikista menoista.
-* Menolaskurin laajennus budjettilaskuriksi, johon voi lisätä tulotietoja.
-* Käyttäjälle lisätään salasana, joka vaaditaan kirjatuessa.
-* Käyttäjätunnuksen poisto ja siihen liittyvän menolistan poistaminen.
-* Käyttäjä voi perua väärin merkatut menot.
-* Käyttäjällä voi olla useampia menolistoja esim. eri kuukausille.
-* Useampi käyttäjä voi nähdä ja muokata samaa budjettia esim. perheelle yhteinen budjetti.
+Ensimmäisen version jälkeen, sovellukseen voidaan lisätä seuraavia toiminnallisuuksia.
 
+- Pakatut tarvarat säilyvät listalla (esim. Ne voidaan yliviivata)
+-  Jos reissuun lähtiessä tarvitsee vaikka useammat housut, niin voisi lisätä tuotteiden lukumäärän tuotteen perään.
+- Pakkauslista olisi mahdollista jakaa muiden käyttäjien kanssa, esim. Perheen lomareissua varten suunniteltua pakkauslistaa pääsisivät useammat käyttäjät tutkimaan.
+- Pakkauslistalle voisi luoda yläkategorioita, jonka alle tuotteet sijoitettaisiin. Esim. Vaatteet, hygienia jne.
+- Salasana käyttäjätunnuksen yhteyteen.
