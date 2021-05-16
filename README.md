@@ -1,15 +1,20 @@
-# **Ohjelmistotekniikka, harjoitustyö**
-Helsingin yliopiston [Ohjelmistotekniikan](https://ohjelmistotekniikka-hy.github.io/) kurssille kevät 2021 toteutettu harjoitustyö.
-Projektina on JavaFX sovellus, jolla tunnuksen luonut käyttäjä voi kirjata ja seurata omia menojaan.
+#**ItemList – Pakkauslista sovellus**
 
-Sovellus ExpenseCounter (menolaskuri) löytää [täältä](https://github.com/repemi/ot-harjoitustyo/tree/master/ExpenseCounter)
+Helsingin yliopiston [Ohjelmistotekniikan](https://ohjelmistotekniikka-hy.github.io/) kurssille kevät 2021 toteutettu harjoitustyö. Projektina on JavaFX sovellus.
+
+_Mitä mukaan reissuun tai matkalle ? Pakkauslista on kätevä tapa laittaa muistiin tuotteet/tavarat, jotka haluat muistaa pakata reissua varten._
+
+Sovelluksen avulla käyttäjän on mahdollista luoda yksilöllinen pakkauslista. Pakkauslista sovellusta käytetään sisäänkirjautuneena. Useampi rekisteröitynyt käyttäjä voi käyttää sovellusta, ja jokainen pääsee omaan pakkauslistaansa. Sovellus on hyvin yksinkertainen mallinnus pakkauslistasta.
 
 
 ## Dokumentaatio
 
+* [Käyttöohje](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 * [Vaatimusmäärittely](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-* [Työaikakirjanpito](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 * [Arkkitehtuurikuvaus](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [Testausdokumentti] (TYHJÄ)
+* [Työaikakirjanpito](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
 
 ## Releaset
 
@@ -20,12 +25,12 @@ Sovellus ExpenseCounter (menolaskuri) löytää [täältä](https://github.com/r
 Siirry ensin kansioon:
 
 ```
-cd ExpenseCounter/
+cd ItemList/
 ```
 Ohjelman saa suoritettua komennolla:
 
 ```
-mvn compile exec:java -Dexec.mainClass=expensecounter.Main
+mvn compile exec:java -Dexec.mainClass=itemlist.Main
 ```
 
 ### Testaus
@@ -66,4 +71,4 @@ mvn package
 ```
 komento generoi target hakemistoon suoritettavan jar-tiedoston 
  
-*Kun ExpenseCounter-1.0-SNAPSHOT.jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ExpensesCounter kansion alle, jossa jar tiedosto on mahdollista ajaa.*
+*Kun ItemList-1.0-SNAPSHOT.jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ItemList kansion alle, jossa jar tiedosto on mahdollista ajaa.*
