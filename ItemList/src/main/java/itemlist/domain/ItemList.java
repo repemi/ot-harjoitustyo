@@ -66,17 +66,6 @@ public class ItemList {
                 .filter(i -> !i.isCheck())
                 .collect(Collectors.toList());
     }
-    
-    public List<Item> checkedPacked(){
-        if(loggedIn == null){
-            return new ArrayList<>();
-        }
-        return itemDao.getAll()
-                .stream()
-                .filter(i -> i.getUser().equals(loggedIn))
-                .filter(i->i.isCheck())
-                .collect(Collectors.toList());
-    }
 
     /**
      * Sisäänkirjautuminen

@@ -6,35 +6,60 @@ Ohjelmassa noudatetaan kolmitasoista kerrosarkkitehtuuria, ja pakkausrakenne koo
 
 ![](./kuvat/pakkaus.png)
 
-Pakkaus _expenses.ui_ sisältää JavaFX:llä toteutettuun käyttöliittymään kuuluvat asiat kuten näkymät ja käytettävät komponentit.
-_expenses.domain_ huolehtii sovelluksen logiikasta mm. sovelluksen tilasta ja toiminnoista.
-_expenses.dao_  kansion alta löytyy tietojen pysyväistallennuksesta vastaava koodi. 
+Pakkaus _ itemlist.ui_ sisältää JavaFX:llä toteutettuun käyttöliittymään kuuluvat asiat kuten näkymät ja käytettävät komponentit.
+_ itemlist.domain_ huolehtii sovelluksen logiikasta mm. sovelluksen tilasta ja toiminnoista.
+_ itemlist.dao_  kansion alta löytyy tietojen pysyväistallennuksesta vastaava koodi. 
 
 ## Käyttöliittymä
 
 Käyttöliittymässä on kolme erillistä näkymää: 
 
-* Kirjautumisnäkymä _(loginScene)_
-* Menolaskuri/Päänäkymä _(expensesScene)_
-* Uuden käyttäjän luonti _(newUserScene)_
+* Kirjautumisnäkymä _ (loginScene)_
+* Pakkauslista/Päänäkymä _ (itemListScene)_
+* Uuden käyttäjän luonti _ (newUserScene)_
 
-Jokainen näkymä näkyy vain yksi kerrallaan käyttäjälle ja ne ovat toteutettun JavaFX:n Scene-olioina. Käyttöliittymä on rakennettu luokassa [expense.ui.App](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/ui/App.java)
+Jokainen näkymä näkyy vain yksi kerrallaan käyttäjälle ja ne ovat toteutettun JavaFX:n Scene-olioina. Käyttöliittymä on rakennettu luokassa [itemlist.ui.App](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/ui/App.java)
 
 
 ## Sovelluslogiikka
 
-Sovelluksen loogisesta tietomallista vastaavat luokat [Expense](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/Expense.java) ja [User](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/User.java). Luokat kuvaavat menoja, käyttäjiä ja niiden tehtäviä.
+Sovelluksen loogisesta tietomallista vastaavat luokat [Item](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/domain/Item.java) ja [User](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/domain/User.java) Luokat kuvaavat menoja, käyttäjiä ja niiden tehtäviä.
 
-![](./kuvat/Luokkakaavio.png)
+![](./kuvat/luokkakaavio.png)
 
 
-[ExpensesCounter](https://github.com/repemi/ot-harjoitustyo/blob/master/ExpenseCounter/src/main/java/expensecounter/domain/ExpenseCounterService.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat:
+[ItemList](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/domain/ItemList.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat mm.:
 
 - boolean login(String username)
--void createExpense(String product, User user)
-- lisää metodeja..
--
+-void createItem(String product, User user)
+
 
 ## Tietojen pysyväistallennus
 
-Pakkauksen _expenses.dao_ luokat _FileExpenseDao_  ja _FileUserDao_ huolehtivat tietojen tallettamisesta tiedostoihin.
+Pakkauksen _ itemlist.dao luokat_ FileItemDao_  ja _FileUserDao_ huolehtivat tietojen tallettamisesta tiedostoihin.
+
+Luokissa noudatetaan Data Access Object- suunnittelumallia. Luokat ovat rajapintojen _ItemDao ja _UserDao takana.
+
+### Tiedostot
+
+Sovelluksessa tietojen tallentaminen tapahtuu kahteen erilliseen tiedostoon. Sovelluksen juuresta löytyy [config.properties](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/config.properties), jossa määritellään tiedostojen nimet.
+
+Käyttäjät talletetaan tiedostoon → ensin käyttäjätunnus, jonka jälkeen puolipisteellä erotellaan käyttäjän nimi. 
+
+```
+mminna; Minna Mallikas
+sepi; Seppo Seuraava
+
+``` 
+
+Käyttäjien pakkauslistoille kirjatut tavarat talletetaan tiedostoon → Tuotteen tunniste _id, seuraavaksi mikä tuote halutaan pakata, kolmanneksi tieto siitä onko tuote jo pakattu ja viimeisenä löytyy kenen käyttäjän tuotteesta on kyse. Kuten käyttäjät, myös tuotteiden tiedot erotellaan puolipisteillä
+
+```
+1;housut;false;mminna
+2;hammasharja;true;mminna
+3;puhelimen laturi;false;sepi
+
+``` 
+##Sovelluksen toimintalogiikka sekvenssikaaviossa
+
+
