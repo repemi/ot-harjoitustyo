@@ -49,7 +49,6 @@ Käyttäjät talletetaan tiedostoon → ensin käyttäjätunnus, jonka jälkeen 
 ```
 mminna; Minna Mallikas
 sepi; Seppo Seuraava
-
 ``` 
 
 Käyttäjien pakkauslistoille kirjatut tavarat talletetaan tiedostoon → Tuotteen tunniste _id, seuraavaksi mikä tuote halutaan pakata, kolmanneksi tieto siitä onko tuote jo pakattu ja viimeisenä löytyy kenen käyttäjän tuotteesta on kyse. Kuten käyttäjät, myös tuotteiden tiedot erotellaan puolipisteillä
