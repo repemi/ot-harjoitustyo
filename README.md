@@ -1,4 +1,4 @@
-#**ItemList – Pakkauslista sovellus**
+# **ItemList – Pakkauslista sovellus**
 
 Helsingin yliopiston [Ohjelmistotekniikan](https://ohjelmistotekniikka-hy.github.io/) kurssille kevät 2021 toteutettu harjoitustyö. Projektina on JavaFX sovellus.
 
