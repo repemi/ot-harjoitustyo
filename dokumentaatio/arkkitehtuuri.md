@@ -6,17 +6,17 @@ Ohjelmassa noudatetaan kolmitasoista kerrosarkkitehtuuria, ja pakkausrakenne koo
 
 ![](./kuvat/pakkaus.png)
 
-Pakkaus _ itemlist.ui_ sisältää JavaFX:llä toteutettuun käyttöliittymään kuuluvat asiat kuten näkymät ja käytettävät komponentit.
-_ itemlist.domain_ huolehtii sovelluksen logiikasta mm. sovelluksen tilasta ja toiminnoista.
-_ itemlist.dao_  kansion alta löytyy tietojen pysyväistallennuksesta vastaava koodi. 
+Pakkaus _itemlist.ui_ sisältää JavaFX:llä toteutettuun käyttöliittymään kuuluvat asiat kuten näkymät ja käytettävät komponentit.
+_itemlist.domain_ huolehtii sovelluksen logiikasta mm. sovelluksen tilasta ja toiminnoista.
+_itemlist.dao_  kansion alta löytyy tietojen pysyväistallennuksesta vastaava koodi. 
 
 ## Käyttöliittymä
 
 Käyttöliittymässä on kolme erillistä näkymää: 
 
-* Kirjautumisnäkymä _ (loginScene)_
-* Pakkauslista/Päänäkymä _ (itemListScene)_
-* Uuden käyttäjän luonti _ (newUserScene)_
+* Kirjautumisnäkymä _(loginScene)_
+* Pakkauslista/Päänäkymä _(itemListScene)_
+* Uuden käyttäjän luonti _(newUserScene)_
 
 Jokainen näkymä näkyy vain yksi kerrallaan käyttäjälle ja ne ovat toteutettun JavaFX:n Scene-olioina. Käyttöliittymä on rakennettu luokassa [itemlist.ui.App](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/ui/App.java)
 
@@ -28,17 +28,17 @@ Sovelluksen loogisesta tietomallista vastaavat luokat [Item](https://github.com/
 ![](./kuvat/luokkakaavio.png)
 
 
-[ItemList](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/domain/ItemList.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat mm.:
+[ItemList](https://github.com/repemi/ot-harjoitustyo/blob/master/ItemList/src/main/java/itemlist/domain/ItemList.java) on toiminnallisuudesta vastaava luokka. Luokan avulla tarjotaan käyttöliittymälle jokaiselle toiminnolle oma metodi, joita ovat mm.
 
 - boolean login(String username)
--void createItem(String product, User user)
+- void createItem(String product, User user)
 
 
 ## Tietojen pysyväistallennus
 
-Pakkauksen _ itemlist.dao luokat_ FileItemDao_  ja _FileUserDao_ huolehtivat tietojen tallettamisesta tiedostoihin.
+Pakkauksen _itemlist.dao_ luokat _FileItemDao_  ja _FileUserDao_ huolehtivat tietojen tallettamisesta tiedostoihin.
 
-Luokissa noudatetaan Data Access Object- suunnittelumallia. Luokat ovat rajapintojen _ItemDao ja _UserDao takana.
+Luokissa noudatetaan Data Access Object- suunnittelumallia. Luokat ovat rajapintojen _ItemDao_ ja _UserDao_ takana.
 
 ### Tiedostot
 
@@ -58,8 +58,9 @@ Käyttäjien pakkauslistoille kirjatut tavarat talletetaan tiedostoon → Tuotte
 1;housut;false;mminna
 2;hammasharja;true;mminna
 3;puhelimen laturi;false;sepi
-
 ``` 
-##Sovelluksen toimintalogiikka sekvenssikaaviossa
 
+## Ohjelman rakenteeseen jääneet heikkoudet
+
+Niitä on paljon. Sovellus on äärimmäisen yksinkertainen. Siitä löytyy toisteista koodia käyttöliittymästä mm. taustakuvan olisi voinut miettiä omaksi luokakseen tai ainakin omaksi metodikseen. Dao luokissa toistesta koodia. Myös sovelluksen käynnistys on hyvin hidas, joten taustakuvien lataamista kannattaisi miettiä fiksummin ja tehokkaammin. Tästä nyt muutamia huomioita monista.
 
