@@ -12,13 +12,13 @@ Sovelluksen avulla käyttäjän on mahdollista luoda yksilöllinen pakkauslista.
 * [Käyttöohje](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 * [Vaatimusmäärittely](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Arkkitehtuurikuvaus](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
-* [Testausdokumentti] (TYHJÄ)
+* [Testausdokumentti](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/Tetausdokumentti.md)
 * [Työaikakirjanpito](https://github.com/repemi/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 
 ## Releaset
 
-
+[Loppupalautus](https://github.com/repemi/ot-harjoitustyo/releases/tag/Viikko7)
 
 ## Komentorivitoiminnot
 
