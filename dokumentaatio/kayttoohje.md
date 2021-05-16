@@ -1,6 +1,17 @@
 ### Käyttöohje
 
-Lataa tiedosto itemlist.jar(LINKKI TÄHÄN)
+Lataa tiedosto ItemList-1.0-SNAPSHOT.jar(https://github.com/repemi/ot-harjoitustyo/releases/tag/Viikko7)
+
+Tai vaihtoehtoisesti suoritettava jar luodaan: 
+
+komento:
+```
+mvn package
+```
+komento generoi target hakemistoon suoritettavan jar-tiedoston 
+ 
+*Kun ItemList-1.0-SNAPSHOT.jar tiedosto löytyy target kansiosta. Siirrä se samaan kansioon, mistä löytyy config.properties eli ItemList kansion alle, jossa jar tiedosto on mahdollista ajaa.*
+
 
 ## Konfigurointi
 
@@ -15,10 +26,10 @@ itemFile=items.txt
 ## Ohjelman käynnistys
 
 Ohjelma saadaan käynnistettya komennolla. 
-_HUOM! Tätä ennen tiedosto.jar target tulee siirtää target kansisosta ItemList kansioon ja käynnistää se sieltä käsin._
+**_HUOM! Tätä ennen ItemList-1.0-SNAPSHOT.jar tiedosto tulee siirtää target kansisosta ItemList kansioon ja käynnistää se sieltä käsin_ **
 
 ```
-java -jar tiedosto.jar
+java -jar ItemList-1.0-SNAPSHOT.jar
 ```
 
 ## Sovelluksen toiminnallisuudet
@@ -44,4 +55,4 @@ java -jar tiedosto.jar
 	Jos tuotte on pakattu jo tai sen muusta syystä haluaa poistaa listalta tulee painaa tuotteen nimen vieressä
 	olevaa nappia _x_.
 
-	Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, käyttämällä kirjaudu ulos -nappia. 	Jolloin sovellus palaa takaisin kirjautumisnäkymään.
+Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, käyttämällä _kirjaudu ulos_ nappia, jolloin sovellus palaa takaisin kirjautumisnäkymään.
