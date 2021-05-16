@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package expensecounter.domain;
+package itemlist.domain;
 
 import itemlist.domain.User;
 import org.junit.Test;
@@ -20,12 +20,12 @@ public class UserTest {
 
     @Before
     public void setUp() {
-        u1 = new User("katti", "kattinen");
+        u1 = new User("kattinen", "katti");
     }
 
     @Test
     public void equalWhenSameUsername() {
-        User u2 = new User("katti", "kattinen");
+        User u2 = new User("kattinen", "katti");
 
         assertTrue(u1.equals(u2));
     }
@@ -46,9 +46,9 @@ public class UserTest {
 
     @Test
     public void returnsUsernameRight() {
-        String name = u1.getUsername();
+        String username = u1.getUsername();
 
-        assertEquals("kattinen", name);
+        assertEquals("kattinen", username);
     }
 
     @Test

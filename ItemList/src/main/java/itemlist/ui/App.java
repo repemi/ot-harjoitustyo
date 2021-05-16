@@ -5,6 +5,7 @@ import itemlist.dao.FileUserDao;
 import itemlist.domain.Item;
 import itemlist.domain.ItemList;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import static java.lang.Integer.parseInt;
 import java.util.HashSet;
 import java.util.List;
@@ -19,7 +20,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
@@ -29,11 +38,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
- * Luokka, jossa on sovelluksen käyttöliittymä.
- * JavaFX App
+ * Luokka, jossa on sovelluksen käyttöliittymä. JavaFX App
  */
 public class App extends Application {
 
@@ -46,10 +55,12 @@ public class App extends Application {
     private VBox itemNode;
     private Label menuLabel = new Label();
     private Label loginMessage = new Label();
+    private Text packedItem = new Text();
 
     /**
      * Lataa tiedostot, joihin talletetaan syötteitä.
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     @Override
     public void init() throws Exception {
@@ -66,15 +77,22 @@ public class App extends Application {
     }
 
     /**
-     * Luo jokaiselle tuotteelle oman napin, josta tuotteen voi kuitata pakatuksi.
+     * Luo jokaiselle tuotteelle oman napin, josta tuotteen voi kuitata
+     * pakatuksi.
+     *
      * @param item
-     * @return 
+     * @return
      */
     public Node createItemNode(Item item) {
         HBox box = new HBox(10);
         Label label = new Label(item.getProduct());
         label.setMinHeight(28);
-        Button button = new Button("x");
+        Image check = new Image("file:check.png", 20, 20, false, false);
+
+        Button button = new Button();
+        button.setGraphic(new ImageView(check));
+        button.setMaxSize(10, 10);
+
         button.setOnAction(e -> {
             itemList.packed(item.getId());
             redrawItemList();
@@ -87,9 +105,10 @@ public class App extends Application {
         box.getChildren().addAll(label, spacer, button);
         return box;
     }
-/**
- * Listaa tuotteet, jotka ovat vielä pakkaamatta.
- */
+
+    /**
+     * Listaa tuotteet, jotka ovat vielä pakkaamatta.
+     */
     public void redrawItemList() {
         itemNode.getChildren().clear();
 
@@ -97,26 +116,34 @@ public class App extends Application {
         unPackedItems.forEach(item -> {
             itemNode.getChildren().add(createItemNode(item));
         });
+
     }
-/**
- * Kirjautumisnäkymä.
- * @param stage 
- */
+
+    /**
+     * Kirjautumisnäkymä.
+     *
+     * @param stage
+     */
     public void login(Stage stage) {
         //login Scene
+        BorderPane border = new BorderPane();
         VBox loginPane = new VBox(10);
         HBox inputPane = new HBox(10);
         loginPane.setPadding(new Insets(10));
         Label loginLabel = new Label("Tunnus:");
+        loginLabel.setTextFill(Color.WHITE);
+
         TextField usernameInput = new TextField();
 
         inputPane.getChildren().addAll(loginLabel, usernameInput);
+        border.setLeft(loginPane);
 
         Button loginButton = new Button("Kirjaudu");
         Button createButton = new Button("Luo uusi käyttäjä");
         loginButton.setOnAction(e -> {
             String username = usernameInput.getText();
-            menuLabel.setText("Tervetuloa " + username + " !");
+            
+            menuLabel.setText( "Tervetuloa " + username + " !");
             if (itemList.login(username)) {
                 loginMessage.setText("Tervetuloa");
                 stage.setScene(itemListScene);
@@ -124,7 +151,7 @@ public class App extends Application {
                 redrawItemList();
             } else {
                 loginMessage.setText("Käyttäjää ei löydy");
-                loginMessage.setTextFill(Color.BLUEVIOLET);
+                loginMessage.setTextFill(Color.YELLOW);
             }
 
         });
@@ -135,21 +162,30 @@ public class App extends Application {
 
         loginPane.getChildren().addAll(loginMessage, inputPane, loginButton, createButton);
 
-        loginScene = new Scene(loginPane, 400, 300);
+        Image backgroundImage = new Image("file:luggage.jpg");
+        BackgroundImage bImage = new BackgroundImage(backgroundImage, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+        Background bground = new Background(bImage);
+        border.setBackground(bground);
+        loginScene = new Scene(border, 400, 300);
+
     }
 
     /**
      * Sovelluksen uusi käyttäjä näkymä.
-     * @param stage 
+     *
+     * @param stage
      */
     public void createNewUserScene(Stage stage) {
         //create new user
         VBox newUserPane = new VBox(10);
+        BorderPane border = new BorderPane();
+        border.setLeft(newUserPane);
 
         HBox newUsernamePane = new HBox(10);
         newUsernamePane.setPadding(new Insets(10));
         TextField newUsernameInput = new TextField();
         Label newUsernameLabel = new Label("Tunnus:");
+        newUsernameLabel.setTextFill(Color.WHITE);
         newUsernameLabel.setPrefWidth(100);
         newUsernamePane.getChildren().addAll(newUsernameLabel, newUsernameInput);
 
@@ -157,6 +193,7 @@ public class App extends Application {
         newNamePane.setPadding(new Insets(10));
         TextField newNameInput = new TextField();
         Label newNameLabel = new Label("Nimi:");
+        newNameLabel.setTextFill(Color.WHITE);
         newNameLabel.setPrefWidth(100);
         newNamePane.getChildren().addAll(newNameLabel, newNameInput);
 
@@ -171,33 +208,39 @@ public class App extends Application {
 
             if (username.length() == 2 || name.length() < 2) {
                 userCreationMessage.setText("Käyttäjätunnus tai nimen pituus on liian lyhyt");
-                userCreationMessage.setTextFill(Color.BLUEVIOLET);
+                userCreationMessage.setTextFill(Color.YELLOW);
             } else if (itemList.createUser(username, name)) {
                 userCreationMessage.setText("");
                 loginMessage.setText("Uusi käyttäjä luotu onnistuneesti, nyt voit kirjautua sisään");
-                loginMessage.setTextFill(Color.GREEN);
+                loginMessage.setTextFill(Color.WHITE);
                 stage.setScene(loginScene);
             } else {
                 userCreationMessage.setText("Tunnus on jo käytössä kokeile toista.");
-                userCreationMessage.setTextFill(Color.BLUEVIOLET);
+                userCreationMessage.setTextFill(Color.YELLOW);
             }
 
         });
 
         newUserPane.getChildren().addAll(userCreationMessage, newUsernamePane, newNamePane, createNewUserButton);
+        Image backgroundImage = new Image("file:luggage.jpg");
+        BackgroundImage bImage = new BackgroundImage(backgroundImage, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+        Background bground = new Background(bImage);
+        border.setBackground(bground);
+        newUserScene = new Scene(border, 400, 300);
 
-        newUserScene = new Scene(newUserPane, 400, 300);
     }
 
     /**
      * Luo sovelluksen pakkauslista näkymän.
-     * @param stage 
+     *
+     * @param stage
      */
     public void mainScene(Stage stage) {
         //main
         ScrollPane itemScrollBar = new ScrollPane();
         BorderPane mainPane = new BorderPane(itemScrollBar);
-        itemListScene = new Scene(mainPane, 400, 500, Color.CORAL);
+
+        itemListScene = new Scene(mainPane, 400, 500);
 
         HBox menuPane = new HBox(10);
         Region menuSpacer = new Region();
@@ -236,11 +279,12 @@ public class App extends Application {
 
     /**
      * Sovelluksen pohja.
-     * @param stage 
+     *
+     * @param stage
      */
     public void setUpFirstStage(Stage stage) {
         //setUp first stage
-        stage.setTitle("Pakkauslista ");
+        stage.setTitle("Pakkauslista");
 
         stage.setScene(loginScene);
         stage.show();
@@ -254,10 +298,12 @@ public class App extends Application {
             }
         });
     }
-/**
- * Sovelluksen käynnistäminen.
- * @param stage 
- */
+
+    /**
+     * Sovelluksen käynnistäminen.
+     *
+     * @param stage
+     */
     @Override
     public void start(Stage stage) {
 

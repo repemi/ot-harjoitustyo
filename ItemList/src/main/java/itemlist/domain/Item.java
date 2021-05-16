@@ -47,6 +47,7 @@ public class Item {
 
     /**
      * Palauttaan tuotteen id:n
+     *
      * @return id
      */
     public int getId() {

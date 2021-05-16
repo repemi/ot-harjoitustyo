@@ -1,4 +1,4 @@
-package expensecounter.dao;
+package itemlist.dao;
 
 import itemlist.dao.ItemDao;
 import java.io.File;
@@ -15,7 +15,7 @@ import org.junit.rules.TemporaryFolder;
  *
  * @author erepo
  */
-public class FileExpenseDaoTest {
+public class FileItemDaoTest {
 
     @Rule
     public TemporaryFolder testFolder = new TemporaryFolder();

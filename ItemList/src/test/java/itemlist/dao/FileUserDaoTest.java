@@ -1,4 +1,4 @@
-package expensecounter.dao;
+package itemlist.dao;
 
 import itemlist.dao.FileUserDao;
 import itemlist.dao.UserDao;
@@ -43,15 +43,15 @@ public class FileUserDaoTest {
     public void rightNameAndUsernameInFile(){
         List<User>users = dao.getAll();
         User user = users.get(0);
-        assertEquals("kattinen", user.getName());
-        assertEquals("katti", user.getUsername());
+        assertEquals("katti", user.getName());
+        assertEquals("kattinen", user.getUsername());
     }
     
     @Test
     public void existingUserIsInTheFile(){
-        User user = dao.findByUsername("katti");
-        assertEquals("kattinen", user.getName());
-        assertEquals("katti", user.getUsername());
+        User user = dao.findByUsername("kattinen");
+        assertEquals("katti", user.getName());
+        assertEquals("kattinen", user.getUsername());
     }
     
     @Test
@@ -65,9 +65,9 @@ public class FileUserDaoTest {
         User newUser = new User("pipsa", "possu");
         dao.create(newUser);
         
-        User user = dao.findByUsername("possu");
-        assertEquals("pipsa", newUser.getName());
-        assertEquals("possu", newUser.getUsername());
+        User user = dao.findByUsername("pipsa");
+        assertEquals("possu", newUser.getName());
+        assertEquals("pipsa", newUser.getUsername());
     }
     
     @After
