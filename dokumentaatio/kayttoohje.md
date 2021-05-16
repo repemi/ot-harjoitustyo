@@ -1,10 +1,9 @@
 ### Käyttöohje
 
-Lataa tiedosto ItemList-1.0-SNAPSHOT.jar(https://github.com/repemi/ot-harjoitustyo/releases/tag/Viikko7)
+Lataa tiedosto [ItemList-1.0-SNAPSHOT.jar](https://github.com/repemi/ot-harjoitustyo/releases/tag/Viikko7)
 
 Tai vaihtoehtoisesti suoritettava jar luodaan: 
 
-komento:
 ```
 mvn package
 ```
@@ -26,7 +25,8 @@ itemFile=items.txt
 ## Ohjelman käynnistys
 
 Ohjelma saadaan käynnistettya komennolla. 
-**_HUOM! Tätä ennen ItemList-1.0-SNAPSHOT.jar tiedosto tulee siirtää target kansisosta ItemList kansioon ja käynnistää se sieltä käsin_ **
+
+**HUOM! Tätä ennen ItemList-1.0-SNAPSHOT.jar tiedosto tulee siirtää target kansisosta ItemList kansioon ja käynnistää se sieltä käsin**
 
 ```
 java -jar ItemList-1.0-SNAPSHOT.jar
@@ -41,7 +41,7 @@ java -jar ItemList-1.0-SNAPSHOT.jar
 ![](./kuvat/kirjautuminen.png)
 
 - Uuden käyttäjän luominen tapahtuu:
-	luodaan tunnus, jos sellaista ei vielä ole, syöttämällä kenttiin _tunnus_  valinnainen 	käyttäjätunnus, joka on 	minimissään 2 merkkiä sekä käyttäjän _nimi_. Tunnusta tarvitaan sisään kirjautumiseen.
+	luodaan tunnus, jos sellaista ei vielä ole, syöttämällä kenttiin _tunnus_  valinnainen 	käyttäjätunnus, 	joka on minimissään 2 merkkiä sekä käyttäjän _nimi_. Tunnusta tarvitaan sisään kirjautumiseen.
 
 ![](./kuvat/uusikayttaja.png)
 
@@ -49,10 +49,10 @@ java -jar ItemList-1.0-SNAPSHOT.jar
 
 ![](./kuvat/pakkauslista.png)
 
--Pakkauslistassa:
+- Pakkauslistassa:
 	on mahdollista lisätä tuotteita muistiin, joita haluaa vaikkapa pakata matkalle mukaan. Se
 	tapahtuu kirjoittamalla alhaalla olevaan tyhjään kenttään tuote ja painamalla sen jälkeen _lisää_.
 	Jos tuotte on pakattu jo tai sen muusta syystä haluaa poistaa listalta tulee painaa tuotteen nimen vieressä
 	olevaa nappia _x_.
 
-Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, käyttämällä _kirjaudu ulos_ nappia, jolloin sovellus palaa takaisin kirjautumisnäkymään.
+- Jos sovelluksen haluaa sulkea tai poistua näkymästä tulee kirjautua pihalle, käyttämällä _kirjaudu ulos_ nappia,   	jolloin sovellus palaa takaisin kirjautumisnäkymään.
